@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfólio Profissional</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <style>
+        #carouselPortfolio,
+        main > section {
+            scroll-margin-top: 4rem;
+        }
+
+        .carousel-item {
+            height: min(95vh, 56.28vw);
+            background-color: #301b36;
+        }
+
+        .carousel-item img {
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .carousel-placeholder {
+            height: 100%;
+        }
+
+        .profile-img,
+        .profile-placeholder {
+            width: 180px;
+            max-width: 100%;
+            aspect-ratio: 1;
+        }
+
+        .project-preview,
+        .project-placeholder {
+            aspect-ratio: 1672 / 941;
+        }
+
+        .carousel-placeholder:not([hidden]),
+        .profile-placeholder:not([hidden]),
+        .project-placeholder:not([hidden]) {
+            display: grid;
+            place-items: center;
+        }
+        :root {
+    --cor-menu-rodape: rgb(64, 61, 136) ;
+    --cor-titulos: #6d28d9;
+}
+
+.fundo-personalizado {
+    background-color: var(--cor-menu-rodape);
+}
+
+.titulo-personalizado {
+    color: var(--cor-titulos);
+}
+    </style>
+</head>
+
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark fundo-personalizado sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Rita Pezzo.dev</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+                aria-controls="menu" aria-expanded="false" aria-label="Alternar menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#perfil">Perfil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projetos">Projetos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div id="carouselPortfolio" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselPortfolio" data-bs-slide-to="0"
+                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselPortfolio" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselPortfolio" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="imagens/slide1.png" class="w-100 align-top"
+                        alt="Banner de Rita Pezzo"
+                        onerror="this.hidden = true; this.nextElementSibling.hidden = false">
+                    <div class="text-white carousel-placeholder text-center display-5" style="background-color: rgb(139, 99, 155)" hidden>Slide 1</div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="imagens/slide2.png" class="w-100 align-top"
+                        alt="Monitoramento do Nível de Água com uma prévia do README"
+                        onerror="this.hidden = true; this.nextElementSibling.hidden = false">
+                    <div class="text-white carousel-placeholder text-center display-5" style="background-color: rgb(175, 113, 157)" hidden>Slide 2</div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="imagens/slide3.png" class="w-100 align-top"
+                        alt="Portal de Entretenimento Digital com uma prévia da página"
+                        onerror="this.hidden = true; this.nextElementSibling.hidden = false">
+                    <div class="text-dark carousel-placeholder text-center display-5" style="background-color: rgb(248, 178, 178)" hidden>Slide 3</div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselPortfolio" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselPortfolio" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
+        </div>
+
+        <section id="perfil" class="bg-white min-vh-100 d-flex align-items-center py-5" aria-labelledby="titulo-perfil">
+            <div class="container py-4">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-4 text-center">
+                        <img src="imagens/perfil.png" alt="Foto de Rita Pezzo"
+                            class="profile-img rounded-circle border border-4 border-white shadow img-fluid mb-3 object-fit-cover"
+                            onerror="this.hidden = true; this.nextElementSibling.hidden = false">
+                        <div class="profile-placeholder mx-auto rounded-circle border border-4 border-white shadow mb-3 text-bg-primary display-5 fw-bold"
+                            aria-hidden="true" hidden>RP</div>
+                        <p class="h4 fw-bold mt-3 mb-1">Rita Pezzo</p>
+                        <p class="text-muted mb-2">Desenvolvimento de Sistemas</p>
+                        <span class="badge bg-primary px-3 py-2">Portfólio Acadêmico</span>
+                    </div>
+
+                    <div class="col-lg-8">
+                        <p class="text-uppercase text-muted fw-semibold mb-2">Desenvolvimento de Sistemas</p>
+                        <h1 id="titulo-perfil" class="h2 titulo-personalizado fw-bold mb-3">Perfil Profissional</h1>
+                        <p class="fs-5 text-secondary">
+                            Sou estudante da área de tecnologia com foco em desenvolvimento web, interfaces responsivas
+                            e construção de soluções digitais. Tenho interesse em projetos front-end, organização visual
+                            e uso de boas práticas no desenvolvimento.
+                        </p>
+
+                        <div class="row mt-4 g-3">
+                            <div class="col-md-6">
+                                <div class="card border-0 shadow-sm h-100">
+                                    <div class="card-body">
+                                        <h2 class="h6 fw-bold mb-2">Localização</h2>
+                                        <p class="text-muted mb-0">Praia Grande/SP</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card border-0 shadow-sm h-100">
+                                    <div class="card-body">
+                                        <h2 class="h6 fw-bold mb-2">Área de interesse</h2>
+                                        <p class="text-muted mb-0">Desenvolvimento Web</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card border-0 shadow-sm h-100">
+                                    <div class="card-body">
+                                        <h2 class="h6 fw-bold mb-2">Formação</h2>
+                                        <p class="text-muted mb-0">Desenvolvimento de Sistemas</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card border-0 shadow-sm h-100">
+                                    <div class="card-body">
+                                        <h2 class="h6 fw-bold mb-2">Objetivo</h2>
+                                        <p class="text-muted mb-0">Criar interfaces modernas e projetos digitais</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-4">
+                            <h2 class="h5 fw-semibold mb-3">Tecnologias e ferramentas</h2>
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="card border-0 shadow-sm h-100">
+                                        <ul class="card-body list-unstyled mb-0">
+                                            <li class="d-flex align-items-center gap-3 mb-3">
+                                                <i class="devicon-html5-plain colored fs-2" aria-hidden="true"></i>
+                                                <div>
+                                                    <div class="fw-semibold">HTML5</div>
+                                                    <small class="text-muted">Estrutura</small>
+                                                </div>
+                                            </li>
+                                            <li class="d-flex align-items-center gap-3 mb-3">
+                                                <i class="devicon-css3-plain colored fs-2" aria-hidden="true"></i>
+                                                <div>
+                                                    <div class="fw-semibold">CSS3</div>
+                                                    <small class="text-muted">Estilo</small>
+                                                </div>
+                                            </li>
+                                            <li class="d-flex align-items-center gap-3">
+                                                <i class="devicon-bootstrap-plain colored fs-2" aria-hidden="true"></i>
+                                                <div>
+                                                    <div class="fw-semibold">Bootstrap</div>
+                                                    <small class="text-muted">Layout</small>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="card border-0 shadow-sm h-100">
+                                        <ul class="card-body list-unstyled mb-0">
+                                            <li class="d-flex align-items-center gap-3 mb-3">
+                                                <i class="devicon-python-plain colored fs-2" aria-hidden="true"></i>
+                                                <div>
+                                                    <div class="fw-semibold">Python</div>
+                                                    <small class="text-muted">Algoritmos</small>
+                                                </div>
+                                            </li>
+                                            <li class="d-flex align-items-center gap-3 mb-3">
+                                                <i class="devicon-github-original fs-2" aria-hidden="true"></i>
+                                                <div>
+                                                    <div class="fw-semibold">GitHub</div>
+                                                    <small class="text-muted">Repositórios</small>
+                                                </div>
+                                            </li>
+                                            <li class="d-flex align-items-center gap-3">
+                                                <i class="devicon-vscode-plain colored fs-2" aria-hidden="true"></i>
+                                                <div>
+                                                    <div class="fw-semibold">VS Code</div>
+                                                    <small class="text-muted">Ambiente de desenvolvimento</small>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos" class="py-5" aria-labelledby="titulo-projetos">
+            <div class="container py-4">
+                <div class="text-center mb-5">
+                    <h2 id="titulo-projetos" class="titulo-personalizado fw-bold">Projetos</h2>
+                    <p class="text-muted mb-0">
+                        Alguns projetos e atividades que representam minha evolução na área de desenvolvimento.
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-xl-4">
+                        <article class="card h-100 shadow-sm border-0 rounded-4">
+                            <img src="imagens/slide1.png" class="card-img-top project-preview"
+                                alt="Banner do projeto Portfólio de Rita Pezzo"
+                                onerror="this.hidden = true; this.nextElementSibling.hidden = false">
+                            <div class="project-placeholder card-img-top bg-primary-subtle" aria-hidden="true" hidden>
+                                <i class="devicon-html5-plain colored display-4"></i>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="h5 card-title">Portfólio Pessoal</h3>
+                                <p class="card-text text-muted flex-grow-1">
+                                    Site desenvolvido para apresentar perfil profissional, tecnologias estudadas e projetos realizados.
+                                </p>
+                                <a href="#carouselPortfolio" class="btn btn-outline-primary mt-auto">Ver projeto</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4">
+                        <article class="card h-100 shadow-sm border-0 rounded-4">
+                            <img src="imagens/slide2.png" class="card-img-top project-preview"
+                                alt="Banner do projeto Monitoramento do Nível de Água"
+                                onerror="this.hidden = true; this.nextElementSibling.hidden = false">
+                            <div class="project-placeholder card-img-top bg-warning-subtle" aria-hidden="true" hidden>
+                                <i class="devicon-python-plain colored display-4"></i>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="h5 card-title">Sistema em Python</h3>
+                                <p class="card-text text-muted flex-grow-1">
+                                    Aplicação em Python que exibe alertas coloridos para cinco níveis de água de um
+                                    reservatório, usando a biblioteca Colorama.
+                                </p>
+                                <a href="https://github.com/ritapezzo/nivel-agua" target="_blank" rel="noopener"
+                                    class="btn btn-outline-primary mt-auto">Ver projeto</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="col-md-6 col-xl-4">
+                        <article class="card h-100 shadow-sm border-0 rounded-4">
+                            <img src="imagens/slide3.png" class="card-img-top project-preview"
+                                alt="Banner do projeto Portal de Entretenimento Digital"
+                                onerror="this.hidden = true; this.nextElementSibling.hidden = false">
+                            <div class="project-placeholder card-img-top bg-info-subtle" aria-hidden="true" hidden>
+                                <i class="devicon-css3-plain colored display-4"></i>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="h5 card-title">Portal de Entretenimento Digital</h3>
+                                <p class="card-text text-muted flex-grow-1">
+                                    Portal feito com HTML e CSS, com três colunas sobre filmes e séries, músicas
+                                    e podcasts, e games e tecnologia.
+                                </p>
+                                <a href="https://github.com/ritapezzo/CSS" target="_blank" rel="noopener"
+                                    class="btn btn-outline-primary mt-auto">Ver projeto</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="min-vh-100 d-flex align-items-center py-5" aria-labelledby="titulo-contato">
+            <div class="container py-4">
+                <div class="text-center mb-5">
+                    <h2 id="titulo-contato" class="titulo-personalizado fw-bold">Contato</h2>
+                    <p class="text-muted">Aberto a oportunidades, projetos e conexões na área de tecnologia.</p>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="card shadow-sm border-0 rounded-4 p-4 text-center">
+                            <h3 class="h4 fw-bold mb-3">Fale comigo</h3>
+                            <p class="text-muted mb-4">
+                                Estou em constante aprendizado e disponível para trocar ideias, compartilhar projetos
+                                e construir novas conexões profissionais.
+                            </p>
+
+                            <div class="d-grid gap-3">
+                                <a href="mailto:ritapezzo@gmail.com" class="btn btn-outline-primary btn-lg">Enviar e-mail</a>
+                                <a href="https://github.com/ritapezzo/" target="_blank" rel="noopener"
+                                    class="btn btn-dark btn-lg">GitHub</a>
+                                <a href="https://www.linkedin.com/in/rita-pezzo/" target="_blank" rel="noopener"
+                                    class="btn btn-primary btn-lg">LinkedIn</a>
+                            </div>
+
+                            <hr class="my-4">
+                            <p class="text-muted mb-0"><span class="fw-semibold">Localização:</span> Praia Grande/SP</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="fundo-personalizado text-light py-4">
+        <div class="container text-center">
+            <p class="mb-1">© 2026 - Portfólio Profissional</p>
+            <small>Desenvolvido com HTML, CSS e Bootstrap</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const menu = document.getElementById("menu");
+
+        menu.addEventListener("click", (event) => {
+            if (event.target.closest(".nav-link")) {
+                window.bootstrap?.Collapse.getInstance(menu)?.hide();
+            }
+        });
+    </script>
+</body>
+
+</html>
